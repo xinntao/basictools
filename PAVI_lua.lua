@@ -107,7 +107,7 @@ local function test()
    cmd:text()
    local opt = cmd:parse(arg or {})
    -- PAVI_handshake and get an instance_id
-   local instance_id = PAVI_handshake({usr='Xintao', pwd='123456', model_name='test', main_file='./test/main.lua', opt=opt, model_dir='./parent_file/DIV2K', machine=46})
+   local instance_id = PAVI_handshake({usr='Xintao', pwd='******', model_name='test', main_file='./test/main.lua', opt=opt, model_dir='./parent_file/DIV2K', machine=46})
    print(instance_id)
    -- generate data
    for i= 1,5000 do
@@ -122,7 +122,7 @@ local function test()
          local test_loss = 12+i/167+torch.normal(0,0.1)
          local test_PSNR = 23+i/234+torch.normal(0,0.1)
          local send_data_test = {loss=test_loss, acc_PSNR=test_PSNR}
-         PAVI_senddate({usr='Xintao', pwd='123456', id=instance_id, phase='test', iter=i, data=send_data_test})
+         PAVI_senddate({usr='Xintao', pwd='******', id=instance_id, phase='test', iter=i, data=send_data_test})
       end
    end
    print('Test finish. Please check the PAVI website.')
