@@ -53,7 +53,7 @@ local function PAVI_handshake(tb)
       device      = tb.usr..'@'..tb.machine,
       time        = time_json
    }
-   local PAVI_url = 'http://pavi.parrotsdnn.org/lo'
+   local PAVI_url = 'http://pavi.parrotsdnn.org/log'
    -- We try three times for handshake
    local retry = 0
    local respbody, respcode, respstatus
