@@ -116,7 +116,7 @@ local function test()
       local train_loss = 10+i/100+torch.normal(0,0.5)
       local train_PSNR = 20+i/200+ torch.normal(0,0.5)
       local send_data_train = {loss=train_loss, acc_PSNR=train_PSNR}
-      PAVI_senddate({usr='Xintao', pwd='123456', id=instance_id, phase='train', iter=i, data=send_data_train})
+      PAVI_senddate({usr='Xintao', pwd='******', id=instance_id, phase='train', iter=i, data=send_data_train})
       -- test
       if i%100 == 0 then
          local test_loss = 12+i/167+torch.normal(0,0.1)
